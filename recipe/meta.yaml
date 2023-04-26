@@ -1,5 +1,5 @@
 {% set name = "psf" %}
-{% set version = "2021.6.6" %}
+{% set version = "2023.4.26" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/psf-{{ version }}.tar.gz
-  sha256: 49c7f045970fb0b91fd9c42bd6e07eab174c7026a68d90583323fc498fa9669f
+  sha256: 1a8ce0240d19f4e96d0028e920c993c9d8625247aa7610d5e69d936c300b3c0d
 
 build:
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
