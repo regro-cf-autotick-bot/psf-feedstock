@@ -18,14 +18,13 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - numpy >=1.15.1
+    - numpy >=1.19.2
     - pip
     - python
     - setuptools >=18.0
   run:
-    - numpy >=1.15.1
-    - python
     - {{ pin_compatible('numpy') }}
+    - python
 
 test:
   imports:
@@ -41,6 +40,7 @@ about:
   summary: Point Spread Function calculations for fluorescence microscopy
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/cgohlke/psf/
 
 extra:
   recipe-maintainers:
